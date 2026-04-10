@@ -1,0 +1,5 @@
+{
+  "env": "prod",
+  "storage_path": "/prod/raw/",
+  "database": "prod_db"
+}
