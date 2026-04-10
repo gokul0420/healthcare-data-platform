@@ -1,0 +1,7 @@
+file_name,source_path,target_path,load_type,frequency,last_run_time
+patient_master.csv,input/patients,raw/patients,full,daily,01-04-2026 00:00
+billing_claims.csv,input/billing,raw/billing,incremental,hourly,02-04-2026 10:00
+patient_admissions.csv,input/admissions,raw/admissions,full,daily,01-04-2026 00:00
+doctor_master.csv,input/doctors,raw/doctors,full,daily,01-04-2026 00:00
+lab_results.csv,input/labs,raw/labs,incremental,hourly,02-04-2026 10:00
+hospital_master.csv,input/hospitals,raw/hospitals,full,daily,01-04-2026 00:00
