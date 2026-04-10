@@ -1,0 +1,25 @@
+name: CD Pipeline
+
+on:
+  workflow_dispatch:
+
+jobs:
+  deploy-dev:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy to DEV
+        run: echo "Deploying to DEV environment"
+
+  deploy-test:
+    runs-on: ubuntu-latest
+    needs: deploy-dev
+    steps:
+      - name: Deploy to TEST
+        run: echo "Deploying to TEST environment"
+
+  deploy-prod:
+    runs-on: ubuntu-latest
+    needs: deploy-test
+    steps:
+      - name: Deploy to PROD
+        run: echo "Deploying to PROD environment"
