@@ -1,0 +1,5 @@
+{
+  "env": "dev",
+  "storage_path": "/dev/raw/",
+  "database": "dev_db"
+}
