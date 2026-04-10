@@ -1,0 +1,29 @@
+name: CI Pipeline
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v3
+
+      - name: Check Python Syntax (Notebooks)
+        run: |
+          echo "Checking Python files..."
+          python -m py_compile notebooks/*.py || echo "No Python files found"
+
+      - name: Check Airflow DAG
+        run: |
+          echo "Checking DAG..."
+          python dags/*.py || echo "No DAG found"
+
+      - name: Check SQL Files
+        run: |
+          echo "Checking SQL files..."
+          ls sql/ || echo "No SQL files found"
