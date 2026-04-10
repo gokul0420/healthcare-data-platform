@@ -1,0 +1,5 @@
+{
+  "env": "test",
+  "storage_path": "/test/raw/",
+  "database": "test_db"
+}
